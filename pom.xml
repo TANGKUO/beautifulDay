@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.profesorfalken</groupId>
-    <artifactId>jPowerShell</artifactId>
+    <groupId>com.tangkuo</groupId>
+    <artifactId>beautifulDay</artifactId>
     <version>1.7</version>
     <packaging>jar</packaging>
     
-    <name>jPowerShell</name>
-    <description>API to use PowerShell from Java</description>
-    <url>https://github.com/profesorfalken/jPowerShell</url>
+    <name>beautifulDay</name>
+    <description>API to use beautifulDay from Java</description>
+    <url>https://github.com/tangkuo/beautifulDay</url>
 
     <licenses>
         <license>
@@ -21,14 +21,14 @@
     <developers>
         <developer>
             <name>Javier Garcia Alonso</name>
-            <email>profesorfalken.github@gmail.com</email>
-            <organization>ProfesorFalken</organization>
-            <organizationUrl>http://www.profesorfalken.com</organizationUrl>
+            <email>tangkuo.github@gmail.com</email>
+            <organization>tangkuo</organization>
+            <organizationUrl>http://www.tangkuo.com</organizationUrl>
         </developer>
     </developers>
     
     <scm>
-        <url>https://github.com/profesorfalken/jPowerShell.git</url>
+        <url>https://github.com/tangkuo/beautifulDay.git</url>
     </scm>
     
     <distributionManagement>
