@@ -25,7 +25,7 @@
 		<setting name="defaultStatementTimeout" value="60" />
 	</settings>
 	<typeHandlers>
-		<typeHandler handler="com.kmt.channel.typeHandler.DateTypeHandler"/>
+		<typeHandler handler="com.tk.cn.utils.kmtchannel.DateTypeHandler"/>
 	</typeHandlers>
 
 </configuration>
