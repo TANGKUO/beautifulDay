@@ -20,6 +20,12 @@
 	</licenses>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.hyperic.sigar/com.springsource.org.hyperic.sigar -->
+		<dependency>
+			<groupId>org.hyperic.sigar</groupId>
+			<artifactId>com.springsource.org.hyperic.sigar</artifactId>
+			<version>1.6.3</version>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
 		<dependency>
