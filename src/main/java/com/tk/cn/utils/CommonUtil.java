@@ -1706,7 +1706,7 @@ public class CommonUtil {
         Calendar cal2 = Calendar.getInstance();
         cal2.setTime(date2);
         return (cal1.get(cal1.YEAR) == cal2.get(cal2.YEAR) && cal1.get(cal1.DAY_OF_YEAR) == cal2.get(cal2.DAY_OF_YEAR));
-    }
+    } 
 
 
     /**
