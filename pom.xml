@@ -21,6 +21,14 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/org.glassfish.hk2.external/javax.inject -->
 		<dependency>
 			<groupId>org.glassfish.hk2.external</groupId>
