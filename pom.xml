@@ -20,6 +20,13 @@
 	</licenses>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.hyperic.sigar/com.springsource.org.hyperic.sigar -->
 		<dependency>
 			<groupId>org.hyperic.sigar</groupId>

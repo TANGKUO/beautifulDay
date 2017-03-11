@@ -38,4 +38,19 @@ public class ConfigUtil {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * <p>Description: </p>
+	 * @param string
+	 * @return  
+	 * @author  tangkuo
+	 * @date    2017年3月11日 下午9:32:19
+	 */
+	public static String getProperty(String key) {
+		if (null == configMap) {
+			init();
+		}
+		String value = configMap.get(key);
+		return value;
+	}
 }
