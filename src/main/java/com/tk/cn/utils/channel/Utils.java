@@ -1,4 +1,4 @@
-package com.tk.cn.utils.kmtchannel;
+package com.tk.cn.utils.channel;
 
 import java.lang.reflect.Array;
 import java.math.BigDecimal;

@@ -1,5 +1,5 @@
 
-package com.tk.cn.utils.kmtchannel;
+package com.tk.cn.utils.channel;
 
 import java.util.Calendar;
 import java.util.Date;
