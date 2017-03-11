@@ -1713,9 +1713,6 @@ public class CommonUtil {
      * @desc: 对象转二进制数组
      * @param obj
      * @return
-     * @auther: 陈军
-     * @mail：chenjun@hyxt.com
-     * @date: 2014-5-20 下午02:33:28
      */
     public static byte[] objectToByte(Object obj) {
         byte[] byteArray = null;
