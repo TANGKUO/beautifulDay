@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+      
+       <context:annotation-config/>
+       <context:component-scan base-package="com.tk.cn"/>
+
+
+         <!--  
+       <context:component-scanbase-packagecontext:component-scanbase-package="com.tk.cn"/>
+  -->    
+       <!-- 引入properties 文件 -->
+       <bean   class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+          <property name="locations">
+             <list>
+                <value>classpath:jdbc.properties</value>
+             </list>
+          </property>
+       </bean>
+       <!-- datasource -->
+       <!-- BoneCP 配置数据源 -->
+         <bean  id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+         <property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="partitionCount" value="${jdbc.partitionCount}" />
+		<property name="acquireIncrement" value="${jdbc.acquireIncrement}" />
+		<property name="statementsCacheSize" value="${jdbc.statementsCacheSize}" />
+		<property name="idleMaxAgeInMinutes" value="${jdbc.idleMaxAgeInMinutes}" />
+		<property name="releaseHelperThreads" value="${jdbc.releaseHelperThreads}" />
+		<property name="minConnectionsPerPartition" value="${jdbc.minConnectionsPerPartition}" />
+		<property name="maxConnectionsPerPartition" value="${jdbc.maxConnectionsPerPartition}" />
+		<property name="idleConnectionTestPeriodInMinutes" value="${jdbc.idleConnectionTestPeriodInMinutes}" />
+         </bean>
+    
+    <!-- =====mybatis 与 spring 配置====== -->
+         <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+             <property name="configLocation" value="classpath:configuration.xml"></property>
+             <property name="dataSource" ref="dataSource"></property>
+         </bean>
+         
+       	<!-- MyBatis 接口编程配置  -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">    
+	    <property name="basePackage" value="com.tk.cn.mapper" />
+	    <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	    
+	</bean>  
+         
+         
+      <!-- ***************事务配置************** -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<aop:config>  
+             <aop:advisor pointcut="execution(* service.*.*(..))"  advice-ref="txAdvice" />  
+    </aop:config>  
+  
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">  
+        <tx:attributes>  
+            <tx:method name="get*" read-only="true" />  
+            <tx:method name="query*" read-only="true" />  
+            <tx:method name="find*" read-only="true" />  
+            <tx:method name="load*" read-only="true" />
+            <tx:method name="select*" read-only="true" />  
+            <tx:method name="*" propagation="REQUIRED" rollback-for="Exception" />  
+        </tx:attributes>  
+    </tx:advice>  
+	         <aop:aspectj-autoproxy/>  
+
+</beans>
