@@ -20,6 +20,15 @@
 	</licenses>
 
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/com.springsource.org.apache.commons.dbcp -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
+			<version>1.2.2.osgi</version>
+		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/org.apache.ibatis/ibatis-core -->
 		<dependency>
 			<groupId>org.apache.ibatis</groupId>
@@ -28,11 +37,8 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.ibatis/ibatis-sqlmap -->
-		<!-- <dependency>
-			<groupId>org.apache.ibatis</groupId>
-			<artifactId>ibatis-sqlmap</artifactId>
-			<version>3.0-beta-10</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.apache.ibatis</groupId> <artifactId>ibatis-sqlmap</artifactId> 
+			<version>3.0-beta-10</version> </dependency> -->
 
 
 		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
