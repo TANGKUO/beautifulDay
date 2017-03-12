@@ -14,3 +14,22 @@ requestUrl ---> DispaterServlet --->HalderMapper ---> Controller  ---> Model(ser
 2:springAOP
 
 
+spring 解决中文乱码问题，直接配置filter在web.xml配置文件中，定义一个处理中文乱码的过滤器，
+
+springMVC 拦截器的使用
+	DispatcherSerlvet 处理请求requestUrl  
+	HanderMapping  分发请求到 Controller
+	Controller 调用 Model 将结果返回到 ViewResolver
+	视图解析器  找到对应得jsp   el  标签。
+	最后输出响应输出到客户端浏览器
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
