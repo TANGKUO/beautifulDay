@@ -19,10 +19,15 @@ spring 解决中文乱码问题，直接配置filter在web.xml配置文件中，
 springMVC 拦截器的使用
 	DispatcherSerlvet 处理请求requestUrl  
 	HanderMapping  分发请求到 Controller
-	Controller 调用 Model 将结果返回到 ViewResolver
+	Controller 调用 Model  ModelAndView 将结果返回到 ViewResolver
 	视图解析器  找到对应得jsp   el  标签。
 	最后输出响应输出到客户端浏览器
 	
+ 1: preHandle         在Controller之前执行拦截器
+ 2: postHandle        在ModelAndView之后执行拦截器,ViewResolver之前
+ 3: afterCompletion   在jsp之后执行拦截器
+ 
+ 
 	
 	
 	
