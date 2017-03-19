@@ -20,6 +20,13 @@
 	</licenses>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/javax.validation/com.springsource.javax.validation -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>com.springsource.javax.validation</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
