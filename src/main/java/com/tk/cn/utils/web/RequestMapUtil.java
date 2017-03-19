@@ -16,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
  * @date    2017年3月19日 下午7:24:26
  */
 public class RequestMapUtil {
+	
 	public static Map<String, String> getParameterMap(HttpServletRequest request) {
 		// 参数Map
 		Map<String, String[]> properties = request.getParameterMap();
