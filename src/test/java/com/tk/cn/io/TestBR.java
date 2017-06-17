@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class TestBR {
+public class TestBR { 
 	public static void main(String[]args)
 	throws Exception{
 		FileInputStream fis=new FileInputStream("/home/tk/a.txt");
