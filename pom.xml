@@ -148,12 +148,27 @@
 			<version>1.5.0.RELEASE</version>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.8.1</version>
+		    <scope>test</scope>
 		</dependency>
+		
+		<!-- <dependency>
+        <groupId>org.junit.extensions</groupId>
+        <artifactId>cpsuite</artifactId>
+        <version>1.2.5</version>
+        <type>jar</type>
+        <scope>compile</scope>
+    </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
@@ -315,6 +330,14 @@
 								</goals>
 							</execution>
 						</executions>
+					</plugin>
+					
+					<!-- 单元测试多线程并发测试依赖 -->
+					<plugin>
+						<groupId>io.takari.maven.plugins</groupId>
+						<artifactId>takari-lifecycle-plugin</artifactId>
+						<version>1.10.1</version>
+						<extensions>true</extensions>
 					</plugin>
 				</plugins>
 			</build>
